@@ -11,7 +11,7 @@
     "bindings": {}
   },
   {
-    "context": "vim_mode == normal",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "space c r": "editor::FindAllReferences",
       "space space": "file_finder::Toggle",
@@ -22,8 +22,17 @@
       "shift-q": "pane::CloseActiveItem",
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
-      "shift-j": "vim::NextSectionStart",
-      "shift-k": "vim::PreviousSectionStart"
+      "shift-j": "vim::EndOfParagraph",
+      "shift-k": "vim::StartOfParagraph"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space e o": "project_panel::ToggleFocus",
+      "space d l": "workspace::ToggleLeftDock",
+      "space d b": "workspace::ToggleBottomDock",
+      "space o c": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -48,15 +57,9 @@
     }
   },
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Terminal",
     "bindings": {
-      "space e": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Dock",
-    "bindings": {
-      "space e": "workspace::ToggleLeftDock"
+      "escape": "workspace::ToggleBottomDock"
     }
   }
 ]
