@@ -13,14 +13,33 @@
       "f g": "pane::DeploySearch",
       "f f": "file_finder::Toggle",
       "space space": "file_finder::Toggle",
+      "space k": "zed::OpenDefaultKeymap"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space c r": "editor::FindAllReferences",
+      "space c a": "editor::ToggleCodeActions",
+      "shift-q": "pane::CloseActiveItem",
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem"
     }
   },
   {
-    "context": "Editor",
+    "context": "menu",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "k": "editor::ContextMenuPrevious",
+      "j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "j": "editor::ContextMenuNext",
+      "k": "editor::ContextMenuPrevious",
+      "enter": "editor::Newline",
+      "tab": "menu::Confirm"
     }
   }
 ]
