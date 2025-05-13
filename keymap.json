@@ -11,19 +11,23 @@
     "bindings": {}
   },
   {
+    "context": "(Editor && vim_mode == normal) || ChangesList || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
+    "bindings": {
+      "space space": "file_finder::Toggle"
+    }
+  },
+  {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space c r": "editor::FindAllReferences",
-      "space space": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
-      "space f f": "file_finder::Toggle",
-      "space k": "zed::OpenDefaultKeymap",
       "space c a": "editor::ToggleCodeActions",
       "shift-q": "pane::CloseActiveItem",
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
       "shift-j": "vim::EndOfParagraph",
-      "shift-k": "vim::StartOfParagraph"
+      "shift-k": "vim::StartOfParagraph",
+      "space k": "editor::Hover"
     }
   },
   {
