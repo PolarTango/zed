@@ -1,14 +1,9 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {}
+    "context": "Workspace || Editor",
+    "bindings": {
+      "ctrl-w": "workspace::CloseWindow"
+    }
   },
   {
     "context": "(Editor && vim_mode == normal) || ChangesList || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
@@ -19,38 +14,33 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "space c r": "editor::FindAllReferences",
-      "space f g": "pane::DeploySearch",
-      "space c a": "editor::ToggleCodeActions",
       "shift-q": "pane::CloseActiveItem",
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
       "shift-j": "vim::EndOfParagraph",
       "shift-k": "vim::StartOfParagraph",
-      "space k": "editor::Hover"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space e o": "project_panel::ToggleFocus",
+      "space c r": "editor::FindAllReferences",
+      "space c a": "editor::ToggleCodeActions",
+      "space f g": "pane::DeploySearch",
+      "space k": "editor::Hover",
+      "space o e": "project_panel::ToggleFocus",
+      "space o c": "terminal_panel::ToggleFocus",
       "space d l": "workspace::ToggleLeftDock",
-      "space d b": "workspace::ToggleBottomDock",
-      "space o c": "terminal_panel::ToggleFocus"
+      "space d b": "workspace::ToggleBottomDock"
     }
   },
   {
     "context": "menu",
     "bindings": {
-      "k": "editor::ContextMenuPrevious",
-      "j": "editor::ContextMenuNext"
+      "shift-k": "editor::ContextMenuPrevious",
+      "shift-j": "editor::ContextMenuNext"
     }
   },
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "j": "editor::ContextMenuNext",
-      "k": "editor::ContextMenuPrevious"
+      "shift-j": "editor::ContextMenuNext",
+      "shift-k": "editor::ContextMenuPrevious"
     }
   },
   {
@@ -61,9 +51,18 @@
     }
   },
   {
+    "context": "ProjectPanel",
+    "bindings": {
+      "escape": "workspace::ToggleLeftDock"
+    }
+  },
+  {
     "context": "Terminal",
     "bindings": {
-      "escape": "workspace::ToggleBottomDock"
+      "escape": "workspace::ToggleBottomDock",
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem"
     }
   }
 ]
