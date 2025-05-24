@@ -1,8 +1,20 @@
 {
+  "auto_update_extensions": {
+    "csharp": true
+  },
   "project_panel": {
     "hide_gitignore": true
   },
-  "file_scan_exclusions": ["obj", "bin"],
+  "file_scan_exclusions": [
+    "obj",
+    "bin",
+    ".",
+    ".tscn",
+    ".import",
+    ".godot",
+    ".sln",
+    ".uid"
+  ],
   "diagnostics": {
     "include_warnings": true,
     "inline": {
