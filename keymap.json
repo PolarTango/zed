@@ -1,16 +1,19 @@
 [
+
   {
     "context": "Workspace || Editor",
     "bindings": {
       "ctrl-w": "workspace::CloseWindow"
     }
   },
+
   {
     "context": "(Editor && vim_mode == normal) || ChangesList || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
     "bindings": {
       "space space": "file_finder::Toggle"
     }
   },
+
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
@@ -30,20 +33,23 @@
       "space d b": "workspace::ToggleBottomDock"
     }
   },
+
   {
     "context": "menu",
     "bindings": {
-      "shift-k": "editor::ContextMenuPrevious",
-      "shift-j": "editor::ContextMenuNext"
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-j": "editor::ContextMenuNext"
     }
   },
+
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "shift-j": "editor::ContextMenuNext",
-      "shift-k": "editor::ContextMenuPrevious"
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious"
     }
   },
+
   {
     "context": "Editor && showing_completions",
     "bindings": {
@@ -51,12 +57,14 @@
       "tab": "menu::Confirm"
     }
   },
+
   {
     "context": "ProjectPanel",
     "bindings": {
       "escape": "workspace::ToggleLeftDock"
     }
   },
+
   {
     "context": "Terminal",
     "bindings": {
@@ -66,4 +74,5 @@
       "ctrl-l": "pane::ActivateNextItem"
     }
   }
+
 ]
